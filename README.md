@@ -264,26 +264,31 @@ Simple text generation.
 
 ## 🚢 Deployment
 
-### Vercel (Frontend)
+Frontend and backend are deployed **separately** on Vercel (each has its own `vercel.json`).
 
-The project includes a `vercel.json` config for one-click frontend deployment:
+### Deploy Backend
 
-1. Push your repo to GitHub
-2. Import the project on [vercel.com](https://vercel.com)
-3. Vercel auto-detects the config — it builds the Vite frontend from `frontend/` and serves the SPA
-4. Set any needed environment variables in the Vercel dashboard
+1. On [vercel.com](https://vercel.com), click **Add New → Project**
+2. Import your GitHub repo
+3. Set **Root Directory** to `backend`
+4. Add **Environment Variables** in the Vercel dashboard:
+   | Variable | Value |
+   |----------|-------|
+   | `ACTIVE_PROVIDER` | `gemini` or `groq` |
+   | `GOOGLE_API_KEY` | Your Gemini key |
+   | `GROQ_API_KEY` | Your Groq key *(if using Groq)* |
+   | `DEMO_MODE` | `False` |
+5. Deploy — note your backend URL (e.g., `https://your-backend.vercel.app`)
 
-> **Note:** The Flask backend needs a separate deployment (e.g., Railway, Render, Fly.io). Update the API base URL in `frontend/src/services/geminiService.js` to point to your deployed backend.
+### Deploy Frontend
 
-### Backend Deployment
-
-Deploy the Flask backend on any Python-compatible platform:
-
-```bash
-# Example: Railway or Render
-# Set environment variables in the platform dashboard:
-#   ACTIVE_PROVIDER, GOOGLE_API_KEY or GROQ_API_KEY, FLASK_HOST=0.0.0.0
-```
+1. Create a **second** Vercel project from the same repo
+2. Set **Root Directory** to `frontend`
+3. Add **Environment Variables**:
+   | Variable | Value |
+   |----------|-------|
+   | `VITE_API_URL` | Your backend URL from above (e.g., `https://your-backend.vercel.app`) |
+4. Deploy — your frontend will connect to the backend automatically
 
 ---
 

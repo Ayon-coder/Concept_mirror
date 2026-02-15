@@ -3,8 +3,10 @@
  * Connects to the Python backend API for both Mentor and Concept Mirror modes
  */
 
-// Backend API URL - change this if your backend is on a different port/host
-const BACKEND_URL = 'http://127.0.0.1:5000';
+// Backend API URL
+// - Development: defaults to http://127.0.0.1:5000
+// - Production: set VITE_API_URL in Vercel Environment Variables
+const BACKEND_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000';
 
 // ============================================
 // HELPER FUNCTIONS
@@ -165,7 +167,7 @@ function getConceptMirrorFallbackResponse(conceptName, explanation) {
         missing: ['Unable to perform deep analysis - backend connection issue'],
         incorrect: [],
         assumptions: [`Assumption that the fundamental definition of "${conceptName}" is shared`],
-        summary: `Your understanding of "${conceptName}" could not be fully analyzed due to a backend connection issue. Please ensure the Python backend is running on ${BACKEND_URL}.`
+        summary: `Your understanding of "${conceptName}" could not be fully analyzed due to a backend connection issue. Please ensure the backend server is running.`
       });
     }, 500);
   });
