@@ -1,5 +1,3 @@
-Demo Line: https://conceptmirror.vercel.app
-
 <p align="center">
   <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React 19" />
   <img src="https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 7" />
@@ -12,6 +10,7 @@ Demo Line: https://conceptmirror.vercel.app
 
 <p align="center">
   <strong>A dual-mode AI assistant with Mentor Mode for interactive learning and Concept Mirror for understanding analysis — powered by Gemini & Groq.</strong>
+  <p>Demo Link:-<a href="https://conceptmirror.vercel.app">Concept_mirror</a></p>
 </p>
 
 <p align="center">
@@ -333,8 +332,6 @@ Contributions are welcome! Here's how to get started:
 3. **Commit** your changes: `git commit -m 'Add amazing feature'`
 4. **Push** to the branch: `git push origin feature/amazing-feature`
 5. **Open** a Pull Request
-
-
 
 <p align="center">
   Made with  by <a href="https://github.com/tech-akash010">tech-akash010</a>
