@@ -332,14 +332,8 @@ Contributions are welcome! Here's how to get started:
 4. **Push** to the branch: `git push origin feature/amazing-feature`
 5. **Open** a Pull Request
 
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/tech-akash010">tech-akash010</a>
+  Made with  by <a href="https://github.com/tech-akash010">tech-akash010</a>
+  Also <a href="https://github.com/Ayon-coder">Ayon-coder</a>
 </p>
